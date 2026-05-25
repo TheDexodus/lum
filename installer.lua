@@ -59,4 +59,5 @@ if installer and fs.exists(installer) then
     fs.delete(installer)
 end
 
+shell.setPath(shell.path() .. ":/bin")
 print("Lum installed successfully!")
