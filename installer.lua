@@ -51,13 +51,6 @@ for _, file in ipairs(files) do
     download(file.url, file.path)
 end
 
-print("Cleaning up installer...")
-
-local installer = shell.getRunningProgram()
-
-if installer and fs.exists(installer) then
-    fs.delete(installer)
-end
-
 shell.setPath(shell.path() .. ":/bin")
+
 print("Lum installed successfully!")
